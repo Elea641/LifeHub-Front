@@ -3,12 +3,12 @@ import { Task } from '../../../../task/models/task.class';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-list-tasks',
+  selector: 'app-to-do-list',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './list-tasks.component.html',
-  styleUrl: './list-tasks.component.scss'
+  templateUrl: './to-do-list.component.html',
+  styleUrl: './to-do-list.component.scss'
 })
-export class ListTasksComponent {
+export class ToDoListComponent {
   @Input() tasks: Task[] = [];
 }
