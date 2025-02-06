@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { DashboardPageComponent } from './dashboard/pages/dashboard-page/dashboard-page.component';
-//import { tasksResolver } from './task/shared/resolvers/tasks.resolver';
+import { tasksResolver } from './task/shared/resolvers/tasks.resolver';
 
 export const routes: Routes = [
     { path: '**', redirectTo: '' },
@@ -8,7 +8,7 @@ export const routes: Routes = [
         path: '',
         component: DashboardPageComponent,
         resolve: {
-            //task: tasksResolver,
+            tasks: tasksResolver,
         },
     }
 ];

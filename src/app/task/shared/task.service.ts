@@ -13,13 +13,11 @@ export class TaskService implements Crud<Task> {
   public task$!: Observable<Task>;
 
   getAll(): Observable<Task[]> {
-    throw new Error('Method not implemented.');
+    return this.http.get<Task[]>(`${environment.urlApi}tasks/`)
   }
 
-  getOne(): void {
-    this.http.get<any>(`${environment.urlApi}tasks/`).subscribe((data) => {
-      console.log('Données reçues:', data);
-    });
+  getOne(id: number): void {
+    this.http.get<any>(`${environment.urlApi}tasks/` + id)
   }
 
   save(task: Task): void {

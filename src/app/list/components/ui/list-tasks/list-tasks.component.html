@@ -1,0 +1,6 @@
+<ul *ngIf="tasks">
+    <li *ngFor="let task of tasks">
+        <h3>{{ task.name }}</h3>
+        <p>{{ task.description }}</p>
+    </li>
+</ul>
