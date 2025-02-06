@@ -1,0 +1,116 @@
+@import '../../../../../assets/styles/var';
+@import '../../../../../assets/styles/mixins.scss';
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    border: solid 1px $--secondary-background-color-input;
+    @include flex-justify-content-center-align-items-center;
+
+    .modal-content {
+        background-color: $--primary-background-color-top-bar;
+        padding: 20px;
+        border-radius: 5px;
+        width: 40rem;
+        min-height: 24rem;
+
+        header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+
+            .button-modal {
+                background-color: transparent;
+                border: none;
+                color: $--secondary-color-text;
+                max-width: 2rem;
+                height: 2rem;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                justify-self: end;
+
+                img {
+                    @include flex-align-items-center;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg);
+                }
+            }
+
+            h3 {
+                justify-self: start;
+                color: $--secondary-color-text;
+            }
+
+            .button-modal:hover {
+                background-color: $--secondary-background-color-hover;
+                max-width: 2rem;
+                height: 2rem;
+            }
+        }
+
+        form {
+            @include flex-direction-column;
+
+            margin-top: 1rem;
+
+            input,
+            label,
+            textarea {
+                color: $--secondary-color-text;
+            }
+
+            label {
+                margin: 0.5rem 0;
+            }
+
+            input {
+                border: solid 1px $--secondary-background-color-input;
+                border-radius: 6px;
+                height: 2rem;
+                padding: 0.5rem;
+                transition: border-color 0.3s ease, background-color 0.3s ease;
+            }
+
+            input:focus {
+                background-color: $--primary-color-input-placeholder;
+            }
+
+
+            textarea {
+                border: solid 1px $--secondary-background-color-input;
+                border-radius: 6px;
+                padding: 0.5rem;
+                resize: vertical;
+                width: 100%;
+                max-height: 30rem;
+                min-height: 5rem;
+                transition: border-color 0.3s ease, background-color 0.3s ease;
+            }
+
+            textarea:focus {
+                border: solid 1px $--secondary-background-color-input;
+                background-color: $--primary-color-input-placeholder;
+                outline: none;
+            }
+
+            button:last-child {
+                background-color: $--primary-color-button;
+                color: $--primary-color-text;
+                width: 8rem;
+                margin: 3rem auto;
+            }
+
+            button:last-child:hover {
+                background-color: $--primary-color-button-hover;
+                color: $--primary-color-text;
+            }
+        }
+    }
+}

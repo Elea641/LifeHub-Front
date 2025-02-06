@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Montserrat:wght@100&family=Poppins:wght@100;200;300');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ELEMENTS COLORS */
+$--primary-background-color: #f9f9f9;
+//$--primary-background-color-actions-bar: #2b216a;
+$--primary-background-color-actions-bar: #02485A;
+//$--primary-background-color-actions-bar-line: #554d88;
+$--primary-background-color-actions-bar-line: #4d7c88;
+$--primary-background-color-top-bar: #ffffff;
+$--primary-background-color-sidebar: #fbfbfb;
+$--primary-background-color-select-option-hover: #dfdfdf;
+
+/* TEXTS COLORS */
+$--primary-color-text: #ffffff;
+//$--secondary-color-text: #646464;
+//$--secondary-color-input-placeholder: #c3c0d5;
+$--secondary-color-text: #646464;
+$--primary-color-input-placeholder: #ececec;
+$--secondary-color-input-placeholder: #c0d1d5;
+$--primary-color-sidebar: #202020;
+
+/* BUTTONS COLORS */
+//$--primary-color-button: #4d4582;
+//$--primary-color-button-hover: #554d88;
+$--primary-color-button: #04647C;
+$--primary-color-button-hover: #21697a;
+$--secondary-color-button: #f0f0f0;
+$--secondary-background-color-hover: #ececec;
+
+/* BORDERS COLORS */
+$--primary-background-color-border: #e8e8e8;
+
+/* INPUTS COLORS */
+//$--primary-background-color-input: #4d4582;
+//$--primary-background-color-input-hover: #554d88;
+$--primary-background-color-input: #04647C;
+$--primary-background-color-input-hover: #21697a;
+$--secondary-background-color-input: #646464;
+
+/* TEXT FONT */
+$--font-family-poppins: 'Poppins', Verdana, sans-serif;
+$--font-family-roboto: 'Roboto', Verdana, sans-serif;

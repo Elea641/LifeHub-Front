@@ -1,0 +1,62 @@
+@import '../../../../../assets/styles/var';
+@import '../../../../../assets/styles/mixins.scss';
+
+nav {
+  background-color: $--primary-background-color-top-bar;
+  height: 3.5rem;
+  width: calc(100vw - 12rem);
+  border-bottom: 2px solid $--primary-background-color-border;
+  @include flex-align-items-center;
+
+  section {
+    position: relative;
+    @include flex-align-items-center;
+
+    button {
+      background-color: transparent;
+      color: $--secondary-color-text;
+      margin-right: 0.5rem;
+    }
+
+    button:hover {
+      background-color: $--secondary-background-color-hover;
+    }
+  }
+
+  section:first-child {
+    @include flex;
+    width: 100%;
+
+    h4 {
+      color: $--secondary-color-text;
+      font-weight: 400;
+      margin: 0 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  section:last-child {
+    button:first-child {
+      background-color: $--primary-color-button;
+      color: $--primary-color-text;
+      width: 8rem;
+      margin-left: 0.5rem;
+    }
+
+    button:first-child:hover {
+      background-color: $--primary-color-button-hover;
+      color: $--primary-color-text;
+    }
+  }
+
+  section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.5rem;
+    width: 1px;
+    background-color: $--primary-background-color-border;
+  }
+}

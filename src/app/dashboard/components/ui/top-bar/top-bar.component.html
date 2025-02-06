@@ -1,0 +1,13 @@
+<nav>
+  <section>
+    <h4>WorkSpace</h4>
+    <button (click)="changeView('home')">Home</button>
+    <button (click)="changeView('list')">List</button>
+    <button (click)="changeView('agenda')">Agenda</button>
+  </section>
+  <section>
+    <button (click)="onClickOpenModalTask()">Ajouter tâche</button>
+  </section>
+</nav>
+
+<app-task-modal />

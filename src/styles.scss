@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/var';
+@import './assets/styles/mixins';
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: $--primary-background-color;
+}
+
+button:not(.button-modal) {
+    min-width: 5rem;
+    height: 2.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    padding: 0 0.5rem;
+    background-color: transparent;
+    color: $--primary-color-text;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:not(.button-modal):hover {
+    background-color: $--primary-color-button-hover;
+}
+
+input:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+label,
+ul,
+li,
+span,
+button,
+input,
+textarea {
+    font-family: $--font-family-roboto;
+    line-height: 1.5;
+}

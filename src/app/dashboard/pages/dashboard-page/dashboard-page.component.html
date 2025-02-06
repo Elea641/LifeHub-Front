@@ -1,0 +1,17 @@
+<app-top-bar (viewChanged)="setView($event)" />
+<app-filter-bar />
+<section [ngSwitch]="currentView">
+    <section *ngSwitchCase="'home'">
+        <p>Dashboard</p>
+    </section>
+    <section *ngSwitchCase="'list'">
+        <app-list-page />
+    </section>
+    <section *ngSwitchCase="'agenda'">
+        <app-calendar-page />
+    </section>
+</section>
+
+<!-- <div *ngIf="task$ | async as task">
+    <h2>{{ task }}</h2>
+</div> -->

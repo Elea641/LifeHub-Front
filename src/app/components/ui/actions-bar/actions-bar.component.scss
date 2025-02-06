@@ -1,0 +1,56 @@
+@import '../../../../assets/styles/var';
+@import '../../../../assets/styles/mixins.scss';
+
+nav {
+  background-color: $--primary-background-color-actions-bar;
+  height: 3rem;
+  width: 100vw;
+
+  @include flex-justify-content-flex-end;
+
+  section {
+    position: relative;
+
+    ul {
+      height: 100%;
+      @include flex-align-items-center;
+
+      li {
+        margin: 0 0.5rem;
+
+        h2 {
+          color: $--primary-color-text;
+        }
+
+        input {
+          height: 2.2rem;
+          border-radius: 6px;
+          background-color: $--primary-background-color-input;
+          border: none;
+          margin-right: 0.5rem;
+          padding: 0 0.5rem;
+          color: $--primary-color-text;
+        }
+
+        input:hover {
+          background-color: $--primary-background-color-input-hover;
+        }
+
+        input::placeholder {
+          color: $--secondary-color-input-placeholder;
+        }
+      }
+    }
+  }
+
+  section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.5rem;
+    width: 1px;
+    background-color: $--primary-background-color-actions-bar-line;
+  }
+}

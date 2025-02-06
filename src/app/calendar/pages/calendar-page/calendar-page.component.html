@@ -1,0 +1,34 @@
+<section>
+    <button class="custom-dropdown" (click)="toggleDropdown()" [class.open]="isOpen">
+        <p class="dropdown-selected">
+            {{ selectedOption }}
+        </p>
+        <ul class="dropdown-options" *ngIf="isOpen">
+            <li *ngFor="let option of options" (click)="selectOption(option, $event)">
+                {{ option.label }}
+            </li>
+        </ul>
+    </button>
+</section>
+
+<section [ngSwitch]="selectedOption">
+    <section *ngSwitchCase="'Année'">
+        <app-calendar-year-view />
+    </section>
+
+    <section *ngSwitchCase="'Mois'">
+        <app-calendar-month-view />
+    </section>
+
+    <section *ngSwitchCase="'Semaine'">
+        <app-calendar-week-view />
+    </section>
+
+    <section *ngSwitchCase="'Jour'">
+        <app-calendar-day-view />
+    </section>
+
+    <section *ngSwitchCase="'Planning'">
+        <p>Planning</p>
+    </section>
+</section>

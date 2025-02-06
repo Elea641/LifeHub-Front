@@ -1,0 +1,29 @@
+@import '../../../../assets/styles/var';
+@import '../../../../assets/styles/mixins.scss';
+
+.sidebar {
+    background-color: $--primary-background-color-sidebar;
+    height: calc(100vh - 3.5rem);
+    width: 12rem;
+    padding: 0.5rem;
+    border-right: 2px solid $--primary-background-color-border;
+
+    @include flex-direction-column;
+
+    section {
+        @include flex-justify-content-center;
+
+        button {
+            background-color: transparent;
+            color: $--primary-color-sidebar;
+            margin: 0;
+            width: 11rem;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: $--secondary-background-color-hover;
+        }
+    }
+}

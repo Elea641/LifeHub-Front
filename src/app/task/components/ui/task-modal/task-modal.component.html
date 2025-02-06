@@ -1,0 +1,20 @@
+<section *ngIf="isModalVisible" class="modal">
+    <article class="modal-content">
+        <header>
+            <button (click)="closeModal()" class="button-modal">
+                <img src="close.svg" alt="Fermer la fenêtre de création de tâche">
+            </button>
+
+            <h3>Ajouter une tâche</h3>
+        </header>
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+            <label for="taskName">Nom de la tâche*</label>
+            <input type="text" id="taskName" formControlName="name" required>
+
+            <label for="taskDescription">Description de la tâche*</label>
+            <textarea id="taskDescription" formControlName="description" rows="4" required></textarea>
+
+            <button type="submit" [disabled]="!taskForm.valid">Ajouter</button>
+        </form>
+    </article>
+</section>
